@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html data-theme="" class="bg-base-200">
+<head>
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover" />
+ <title>Completed - OtokoDesu</title>
+ <meta name="description" content="Unduh dan tonton anime completed subtitle indonesia. (Situs ini dibuat dengan OtakuDesu API/Scraper)" />
+ <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+ <link rel="manifest" href="/assets/images/site.webmanifest">
+ <link rel="stylesheet" href="/assets/css/style.css" />
+ <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+</head>
+<body class="m-0 p-0">
+ <div class="min-h-screen flex flex-col justify-between">
+  <div>
+   <header>
+    <div class="navbar bg-base-100/90 backdrop-blur fixed top-0 border-b border-[hsla(var(--bc)_/_0.2)] z-[100]">
+     <h1 class="flex-1">
+      <a href="/" class="btn btn-ghost normal-case text-xl">OtokoDesu</a>
+     </h1>
+     <div class="flex-none gap-2">
+      <label class="btn btn-ghost btn-square cursor-pointer relative overflow-hidden">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+  <path fill-rule="evenodd" d="M2.25 4.125c0-1.036.84-1.875 1.875-1.875h5.25c1.036 0 1.875.84 1.875 1.875V17.25a4.5 4.5 0 11-9 0V4.125zm4.5 14.25a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd" />
+  <path d="M10.719 21.75h9.156c1.036 0 1.875-.84 1.875-1.875v-5.25c0-1.036-.84-1.875-1.875-1.875h-.14l-8.742 8.743c-.09.089-.18.175-.274.257zM12.738 17.625l6.474-6.474a1.875 1.875 0 000-2.651L15.5 4.787a1.875 1.875 0 00-2.651 0l-.1.099V17.25c0 .126-.003.251-.01.375z" />
+</svg>
+       <select class="absolute select w-7 opacity-0" data-choose-theme>
+        <option value="default" selected>Default</option>
+        <option value="dark">Daisyui Dark</option>
+        <option value="light">Daisyui Light</option>
+       </select>
+      </label>
+      <div class="dropdown dropdown-end">
+       <label class="btn btn-square btn-ghost" tabindex="0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+         <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clip-rule="evenodd" />
+        </svg>
+       </label>
+       <div tabindex="0" class="dropdown-content p-3 shadow bg-base-100 rounded-box w-max flex flex-col gap-3 border border-[hsla(var(--bc)_/_0.2)]">
+        <form class="relative flex flex-row items-center" method="get" action="/search/">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 absolute left-3 pointer-events-none">
+          <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clip-rule="evenodd" />
+         </svg>
+         <input id="search-input" type="search" placeholder="Cari anime..." class="input input-bordered w-72 md:w-96 pl-11" name="q" required autocomplete="off">
+        </form>
+       </div>
+      </div>
+     </div>
+    </div>
+   </header>
+
+   <main class="px-2 py-20 space-y-4">
+    <section class="flex flex-col" id="completed-section">
+     <div class="flex flex-row items-center bg-base-100 rounded-t-box p-3 border border-[hsla(var(--bc)_/_0.2)]">
+      <h2 class="text-xl font-bold flex flex-row items-center gap-2">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path fill-rule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" /></svg>
+       Completed</h2>
+     </div>
+     <ul class="bg-base-100 p-3 flex flex-col gap-2 md:grid md:grid-cols-2 md:gap-3 border-x border-[hsla(var(--bc)_/_0.2)]" id="completed_items">
+      <span class="border-2 w-7 h-7 rounded-full border-base-200/50 border-b-primary animate-spin mx-auto my-36 md:col-span-2" id="loading-spinner1"></span>
+     </ul>
+     <div class="flex flex-row items-center bg-base-100 rounded-b-box p-3 border border-[hsla(var(--bc)_/_0.2)]">
+      <button id="loadMore" class="btn btn-primary btn-sm btn-disabled w-full md:col-span-2">Muat Lebih Banyak</button>
+     </div>
+    </section>
+
+   </main>
+  </div>
+
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="btn btn-primary btn-square btn-sm fixed right-4 bottom-20 hidden" id="toTopBtn" style="animation: fadeInUp .4s ease-in-out">
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-7 h-7">
+    <path fill-rule="evenodd" d="M10 15a.75.75 0 01-.75-.75V7.612L7.29 9.77a.75.75 0 01-1.08-1.04l3.25-3.5a.75.75 0 011.08 0l3.25 3.5a.75.75 0 11-1.08 1.04l-1.96-2.158v6.638A.75.75 0 0110 15z" clip-rule="evenodd" />
+   </svg>
+  </button>
+
+  <nav class="btm-nav btm-nav-md bg-base-100/90 backdrop-blur z-[100]">
+   <a class="hover:text-primary border-t-2 border-[hsla(var(--bc)_/_0.14)]" href="/" title="Beranda">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 p-[1px]">
+     <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+     <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+    </svg>
+   </a>
+   <a class="hover:text-primary border-t-2 border-[hsla(var(--bc)_/_0.14)]" title="Ongoing" href="/ongoing">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 p-[1px]">
+     <path fill-rule="evenodd" d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.545 3.75 3.75 0 013.255 3.717z" clip-rule="evenodd" />
+    </svg>
+   </a>
+   <a class="hover:text-primary border-t-2 hover:border-t-primary" href="#" title="Completed">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 p-[1px]">
+     <path fill-rule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+    </svg>
+   </a>
+   <a class="hover:text-primary border-t-2 border-[hsla(var(--bc)_/_0.14)]" href="/genres" title="Genres">
+   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-tags-fill w-6 h-6 p-[1px]" viewBox="0 0 16 16"><path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/> <path d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z"/>
+   </svg>
+   </a>
+   <a class="hover:text-primary border-t-2 border-[hsla(var(--bc)_/_0.14)]" href="/bookmarks" title="Bookmark">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 p-[1px]">
+     <path fill-rule="evenodd" d="M6 3a3 3 0 00-3 3v12a3 3 0 003 3h12a3 3 0 003-3V6a3 3 0 00-3-3H6zm1.5 1.5a.75.75 0 00-.75.75V16.5a.75.75 0 001.085.67L12 15.089l4.165 2.083a.75.75 0 001.085-.671V5.25a.75.75 0 00-.75-.75h-9z" clip-rule="evenodd" />
+    </svg>
+   </a>
+  </nav>
+
+ </div>
+
+
+
+ <script src="/assets/js/script.js"></script>
+ <script>
+  document.addEventListener("DOMContentLoaded", getAnime.completed());
+ </script>
+</body>
+</html>
