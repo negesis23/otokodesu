@@ -461,7 +461,7 @@ var getAnime = {
     let li = document.createElement("li");
     li.className = "flex flex-row items-center w-full";
     li.style.animation = "fadeInUp .4s ease-in-out";
-    li.innerHTML = `<a href="/anime/?slug=${i.slug}" class="flex flex-row items-center" alt="${i.title}">
+    li.innerHTML = `<a href="/anime/?slug=${i.slug}" class="flex flex-row items-center w-full" alt="${i.title}">
     <img loading="lazy" src="https://images.weserv.nl/?url=${i.poster}&q=10&w=225&h=318&fit=contain&cbg=black&output=webp&default=https://i.ibb.co/CsgfGYT/noImage.jpg" alt="${i.title}" title="${i.title}" class="h-24 bg-[hsla(var(--bc)_/_0.1)] rounded-l-box hover:contrast-125 duration-150" height="96" width="67.92">
     <div class="flex-col flex justify-center gap-1.5 pl-3 pr-2 bg-base-100 w-full active:bg-primary active:text-primary-content hover:bg-[hsl(var(--bc)_/_0.1)] h-24 transition ease-in-out duration-150 border-y border-[hsla(var(--bc)_/_0.2)]">
     <h3 class="font-medium text-lg line-clamp-1">&zwnj;${i.title}</h3>
